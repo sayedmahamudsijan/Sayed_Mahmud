@@ -21,8 +21,8 @@ import {
   ChevronUp,
 } from "lucide-react";
 
-import avatar from "./assets/Sayed_Mahmud.jpg";
-import cvFile from "./assets/Sayed_Mahmud_CV.pdf";
+import avatar from "src/assets/Sayed_Mahmud.jpg";
+import cvFile from "src/assets/Sayed_Mahmud_CV.pdf";
 
 const profile = {
   name: "Sayed Mahmud",        
