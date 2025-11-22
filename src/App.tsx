@@ -25,23 +25,28 @@ import avatar from "src/assets/Sayed_Mahmud.jpg";
 import cvFile from "src/assets/Sayed_Mahmud_CV.pdf";
 
 const profile = {
-  name: "Sayed Mahmud",
+  name: "Sayed Mahmud",        
   title: "Metamaterials Researcher • QA Engineer • ETE (IIUC)",
   location: "Mirpur 1, Dhaka, Bangladesh",
   email: "sayedmahamudsijann@gmail.com",
   phone: "+8801875806948",
   summary:
     "Research focus on metamaterials and microwave absorbers; experience with CST, MATLAB, VLSI sessionals; QA internships and club leadership.",
-  photo: avatar,
   links: {
     orcid: "https://orcid.org/0000-0002-3260-308X",
     linkedin: "https://linkedin.com/in/sayed-mahamud-2619b211",
     scholar: "https://scholar.google.com/citations?hl=en&user=ERA4SrsAAAAJ",
     researchgate: "https://www.researchgate.net/profile/Sayed-Sijan",
     github: "https://github.com/sayedmahamudsijan",
-    cvUrl: cvFile,
+photo: avatar,
+links: {
+  // ...
+  cvUrl: cvFile,
+}
+  
   },
 };
+
 
 const education = [
   {
@@ -99,12 +104,13 @@ type Publication = {
   type: PubType;
   title: string;
   venue: string;
-  doi?: string;
+  doi?: string; 
   authors: string;
-  abstract?: string;
+  abstract?: string; 
 };
 
 const publications: Publication[] = [
+  // From your earlier list + new ones you sent
   {
     type: "Conference",
     title:
@@ -312,8 +318,8 @@ export default function App() {
                 }}
                 className={`px-3 py-1.5 rounded-full text-sm transition-colors ${
                   active === n.id
-                    ? "bg-slate-900 text-white dark:bg:white dark:text-slate-900"
-                    : "hover:bg-slate-100 dark:hover:bg:white/10"
+                    ? "bg-slate-900 text-white dark:bg-white dark:text-slate-900"
+                    : "hover:bg-slate-100 dark:hover:bg-white/10"
                 }`}
               >
                 {n.label}
@@ -323,10 +329,11 @@ export default function App() {
           <div className="flex items-center gap-2">
             <a
               href={profile.links.cvUrl}
-              download="Sayed_Mahmud_CV.pdf"
               className="hidden sm:inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm hover:shadow"
+              target="_blank"
+              rel="noreferrer"
             >
-              <Download className="w-4 h-4" /> Download CV
+              <Download className="w-4 h-4" /> CV
             </a>
             <button
               onClick={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
@@ -610,7 +617,7 @@ export default function App() {
                   {s.items.map((it, i) => (
                     <span
                       key={i}
-                      className="text-xs border rounded-full px-2 py-1 bg-white/70 dark:bg:white/10"
+                      className="text-xs border rounded-full px-2 py-1 bg-white/70 dark:bg-white/10"
                     >
                       {it}
                     </span>
@@ -647,7 +654,7 @@ export default function App() {
               </p>
               <a
                 href={`mailto:${profile.email}`}
-                className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-slate-900 text-white dark:bg:white dark:text-slate-900"
+                className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-slate-900 text-white dark:bg-white dark:text-slate-900"
               >
                 <Mail className="w-4 h-4" /> Email me
               </a>
@@ -701,7 +708,7 @@ export default function App() {
                   placeholder="Your message…"
                   className="w-full px-3 py-2 rounded-xl border bg-white/70 dark:bg-white/10"
                 />
-                <button className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-slate-900 text-white dark:bg:white dark:text-slate-900">
+                <button className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-slate-900 text-white dark:bg-white dark:text-slate-900">
                   Send via Email
                 </button>
               </form>
