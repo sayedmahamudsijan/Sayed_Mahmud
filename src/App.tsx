@@ -25,28 +25,23 @@ import avatar from "./assets/Sayed_Mahmud.jpg";
 import cvFile from "./assets/Sayed_Mahmud_CV.pdf";
 
 const profile = {
-  name: "Sayed Mahmud",        
+  name: "Sayed Mahmud",
   title: "Metamaterials Researcher • QA Engineer • ETE (IIUC)",
   location: "Mirpur 1, Dhaka, Bangladesh",
   email: "sayedmahamudsijann@gmail.com",
   phone: "+8801875806948",
   summary:
     "Research focus on metamaterials and microwave absorbers; experience with CST, MATLAB, VLSI sessionals; QA internships and club leadership.",
+  photo: avatar,
   links: {
     orcid: "https://orcid.org/0000-0002-3260-308X",
     linkedin: "https://linkedin.com/in/sayed-mahamud-2619b211",
     scholar: "https://scholar.google.com/citations?hl=en&user=ERA4SrsAAAAJ",
     researchgate: "https://www.researchgate.net/profile/Sayed-Sijan",
     github: "https://github.com/sayedmahamudsijan",
-photo: avatar,
-links: {
-  // ...
-  cvUrl: cvFile,
-}
-  
+    cvUrl: cvFile,
   },
 };
-
 
 const education = [
   {
@@ -104,13 +99,12 @@ type Publication = {
   type: PubType;
   title: string;
   venue: string;
-  doi?: string; 
+  doi?: string;
   authors: string;
-  abstract?: string; 
+  abstract?: string;
 };
 
 const publications: Publication[] = [
-  // From your earlier list + new ones you sent
   {
     type: "Conference",
     title:
@@ -148,8 +142,7 @@ const publications: Publication[] = [
     type: "Journal",
     title:
       "Spiral coil shaped multi-resonance metamaterial absorber for wireless communication and satellite applications",
-    venue:
-      "AEU-International Journal of Electronics and Communications 198, 155844 (2025)",
+    venue: "AEU-International Journal of Electronics and Communications 198, 155844 (2025)",
     doi: "https://doi.org/10.1016/j.aeue.2025.155844",
     authors: "M Faysal, S Mahmud, SR Chowdhury, AR Chowdhury",
     abstract:
@@ -293,7 +286,7 @@ export default function App() {
         animate={{ y: [0, 20, 0] }}
         transition={{ repeat: Infinity, duration: 20 }}
       >
-        <div className="relative left-[10%] aspect-[5/1] w-[80%] bg-gradient-to-r from-sky-300 via-indigo-300 to-fuchsia-300 dark:from-sky-600/40 dark:via-indigo-600/40 dark:to-fuchsia-600/40 rounded-full" />
+        <div className="relative left-[10%] aspect-[5/1] w-[80%] bg-gradient-to-r from-sky-300 via-indigo-300 to-fuchsia-300 dark:from-sky-600/40 dark:via-indigo-600/40 dark:to-fuchsia-600/40 rounded-3xl" />
       </motion.div>
 
       {/* Top Nav */}
